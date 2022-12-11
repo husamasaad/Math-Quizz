@@ -317,8 +317,6 @@ header img {
 }
 
 .answers-area input[type="radio"]:checked::before {
-  content: '\00D7';
-  font-size: 4rem;
   color: var(--main-clr);
 }
 .answers-area input[type="radio"]:checked {
