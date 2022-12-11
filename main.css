@@ -52,10 +52,10 @@ h4 {
   font-family: var(--ff-primary);
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -257,7 +257,6 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vh;
 }
 @media (min-width: 767px) {
   .answers-area {
@@ -266,6 +265,7 @@ header img {
 }
 
 .answers-area .answer {
+  margin-top: 30px;
   width: 98%;
   padding: 10px 15px;
   background-color: var(--main-alt-clr);
@@ -338,7 +338,7 @@ header img {
 }
 
 #submit-btn {
-  margin-top: 20vh;
+  margin-top: 5vh;
   width: 100%;
   padding: 20px;
   border-radius: 15px;
