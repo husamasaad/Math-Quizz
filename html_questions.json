@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Find the sum of 111 + 222 + 333",
+    "answer_1": "700",
+    "answer_2": "666",
+    "answer_3": "10",
+    "answer_4": "100",
+    "right_answer": "666"
+  },
+  {
+    "title": "Subtract 457 from 832",
+    "answer_1": "375",
+    "answer_2": "343",
+    "answer_3": "376",
+    "answer_4": "443",
+    "right_answer": "375"
+  },
+  {
+    "title": "50 times 5 is equal to",
+    "answer_1": "2500",
+    "answer_2": "505",
+    "answer_3": "500",
+    "answer_4": "None of these",
+    "right_answer": "None of these"
+  },
+  {
+    "title": "90 ÷ 10",
+    "answer_1": "9",
+    "answer_2": "10",
+    "answer_3": "900",
+    "answer_4": "1",
+    "right_answer": "9"
+  },
+  {
+    "title": "what is: 26 + 32 - 12",
+    "answer_1": "0",
+    "answer_2": "32",
+    "answer_3": "56",
+    "answer_4": "46",
+    "right_answer": "56"
+  },
+  {
+    "title": "Find the product of 72 × 3",
+    "answer_1": "216",
+    "answer_2": "7230",
+    "answer_3": "106",
+    "answer_4": "372",
+    "right_answer": "216"
+  },
+  {
+    "title": "Solve : 24 + 4 ÷ 4",
+    "answer_1": "25",
+    "answer_2": "6",
+    "answer_3": "28",
+    "answer_4": "7",
+    "right_answer": "25"
+  },
+  {
+    "title": "Solve : 200 – (96 ÷ 4)",
+    "answer_1": "105",
+    "answer_2": "176",
+    "answer_3": "26",
+    "answer_4": "16",
+    "right_answer": "176"
+  },
+  {
+    "title": "Solve : 3 + 6 x (5 + 4) ÷ 3 - 7",
+    "answer_1": "11",
+    "answer_2": "16",
+    "answer_3": "14",
+    "answer_4": "15",
+    "right_answer": "14"
+  },
+  {
+    "title": "Solve: 150 ÷ (6 + 3 x 8) - 5",
+    "answer_1": "2",
+    "answer_2": "5",
+    "answer_3": "0",
+    "answer_4": "none of these",
+    "right_answer": "0"
+  }
+]

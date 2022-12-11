@@ -1,0 +1,347 @@
+/* Variables */
+:root {
+  --main-clr: #E98530;
+  --main-alt-clr: #CBDCE6;
+  --bg-clr-main: #242B3F;
+  --bg-clr-alt: #2D4159;
+  --box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--bg-clr-main);
+  color: var(--main-alt-clr);
+  text-transform: capitalize;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 390px) {
+  .container {
+      width: 367px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+      width: 600px;
+  }
+}
+
+main {
+  height: 100vh;
+}
+
+header {
+  padding: 10px 0;
+  box-shadow: var(--box-shadow);
+  transform: translateY(-100%);
+  transition: .5s;
+}
+header.show-header {
+  transform: translateY(0);
+  background-color: var(--bg-clr-alt);
+}
+@media (max-width: 767px) {
+  header {
+    padding: 30px 0;
+  }
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .container .score {
+  font-size: 1.6rem;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.start {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  background-color: #050b1c99;;
+  text-align: center;
+  padding-top: 250px;
+  font-size: 2rem;
+  line-height: 2;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start > .click {
+  color: var(--main-clr);
+  cursor: pointer;
+}
+
+.start .username {
+  margin-top: 30px;
+  padding: 10px 25px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: var(--bg-clr-alt);
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+.start .username:focus {
+  outline: none;
+  caret-color: var(--main-clr);
+}
+
+.start .start-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--main-clr);
+  color: var(--main-alt-clr);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.start.hide{
+  display: none;
+}
+
+.quiz {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transform: translateX(-200%);
+  transition: .5s;
+}
+.quiz.show-quiz {
+  transform: translateX(0);
+}
+
+.quiz .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--main-alt-clr);
+  position: relative;
+}
+.quiz .info hr {
+  height: 5px;
+  width: 0;
+  background-color: var(--main-clr);
+  position: absolute;
+  bottom: 0;
+  border: none;
+  transition: .3s;
+}
+
+.quiz-area {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 767px) {
+  .quiz-area {
+    margin-top: 10px;
+  }
+}
+
+.question {
+  font-size: 1.3rem;
+}
+
+.answers-area {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+@media (min-width: 767px) {
+  .answers-area {
+    margin-top: 15px;
+  }
+}
+
+.answers-area .answer {
+  width: 98%;
+  padding: 10px 15px;
+  background-color: var(--main-alt-clr);
+  color: var(--bg-clr-main);
+  font-size: 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+}
+
+
+.answers-area input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--main-clr);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+}
+.answers-area input[type="radio"]::before {
+  font-size: 2.5rem;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.answers-area input[type="radio"][id = "a-1"]::before {
+  content: 'A';
+}
+.answers-area input[type="radio"][id = "a-2"]::before {
+  content: 'B';
+}
+.answers-area input[type="radio"][id = "a-3"]::before {
+  content: 'C';
+}
+.answers-area input[type="radio"][id = "a-4"]::before {
+  content: 'D';
+}
+
+.answers-area input[type="radio"]:checked::before {
+  content: '\00D7';
+  font-size: 4rem;
+  color: var(--main-clr);
+}
+.answers-area input[type="radio"]:checked {
+  background-color: var(--main-alt-clr);
+}
+.answers-area .answer.checked {
+  background-color: var(--main-clr);
+  color: white;
+  flex-direction: row-reverse;
+}
+
+
+.answers-area .answer label {
+  position: absolute;
+  left: 80px;
+  width: calc(100% - 130px);
+  cursor: pointer;
+}
+
+#submit-btn {
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  background-color: var(--main-clr);
+  color: var(--main-alt-clr);
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: .5s;
+}
+#submit-btn:hover {
+  background-color: #e98630d0;
+}
+@media (min-width: 767px) {
+  #submit-btn {
+    margin-top: 35px;
+  }
+}
+
+.results {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-clr-main);
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  transform: translateY(-100%);
+  transition: .5s;
+}
+.results.show {
+  transform: translateY(0);
+}
+
+.results .container {
+  width: 350px;
+  text-align: center;
+  background-color: var(--main-alt-clr);
+  color: var(--bg-clr-main);
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+.results .container img {
+  width: 120px;
+}
+
+.results .container h1 {
+  font-size: 1.9rem;
+  margin-top: 15px;
+}
+.results .container h2 {
+  font-size: 2rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #32BD6A;
+}
+
+.results .container p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.results .container p:last-of-type span:first-child {
+  color: var(--main-clr);
+}
+.results .container p:last-of-type span:last-child {
+  color: #32BD6A;
+}
+.results .container p:last-of-type {
+  margin-bottom: 20px;
+}
+
