@@ -257,7 +257,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 4vh;
 }
 @media (min-width: 767px) {
   .answers-area {
@@ -274,7 +274,6 @@ header img {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 10px;
   box-shadow: var(--box-shadow);
   position: relative;
   transition: .5s;
@@ -339,7 +338,7 @@ header img {
 }
 
 #submit-btn {
-  margin-top: 50px;
+  margin-top: 20vh;
   width: 100%;
   padding: 20px;
   border-radius: 15px;
