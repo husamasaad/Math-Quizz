@@ -140,10 +140,10 @@ header .container {
 header .container .player-info {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 header .container .player-info h2{
   transform: translateY(3px);
+  margin-left: 20px;
 }
 
 header .container .score {
